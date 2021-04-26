@@ -21,6 +21,7 @@ module ApplicationHelper
   end
 
   def pluralize_tips(tips)
+    pluralize = 's' if tips.count != 1
     "#{tips.count} tips#"
   end
 end
