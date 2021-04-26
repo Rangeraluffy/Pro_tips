@@ -1,22 +1,17 @@
 module ApplicationHelper
+      DEFAULT_AVATAR_1 = "https://68.media.tumblr.com/7d65a925636d6e3df94e2ebe30667c29/tumblr_nq1zg0MEn51qg6rkio1_500.jpg"
+      DEFAULT_AVATAR_2 = "https://68.media.tumblr.com/9f9b498bf798ef43dddeaa78cec7b027/tumblr_o51oavbMDx1ugpbmuo7_500.png"
+      DEFAULT_AVATAR_3 = "http://78.media.tumblr.com/75bad14fee104f69652084d545213291/tumblr_mldfty8fh41qcnibxo5_1280.png"
+      DEFAULT_AVATAR_4 = "https://68.media.tumblr.com/22d1c50c3e2ca1062a94b47a65bfeb6d/tumblr_o51oavbMDx1ugpbmuo10_500.png"
+
   def default_avatar(user)
-    if user.name.present?
-      if user.name[0].downcase < 'h'
-        "https://68.media.tumblr.com/7d65a925636d6e3df94e2ebe30667c29/tumblr_nq1zg0MEn51qg6rkio1_500.jpg"
-      elsif user.name[0].downcase < 'n'
-        "https://68.media.tumblr.com/9f9b498bf798ef43dddeaa78cec7b027/tumblr_o51oavbMDx1ugpbmuo7_500.png"
-      elsif user.name[0].downcase < 'u'
-        "http://78.media.tumblr.com/75bad14fee104f69652084d545213291/tumblr_mldfty8fh41qcnibxo5_1280.png"
-      else
-        "https://68.media.tumblr.com/22d1c50c3e2ca1062a94b47a65bfeb6d/tumblr_o51oavbMDx1ugpbmuo10_500.png"
-      end
-    else
-      "https://68.media.tumblr.com/7d65a925636d6e3df94e2ebe30667c29/tumblr_nq1zg0MEn51qg6rkio1_500.jpg"
+    case
+      when user.name.blank?            then DEFAULT_AVATAR_1
+      when user.name[0].downcase < 'h' then DEFAULT_AVATAR_1
+      when user.name[0].downcase < 'n' then DEFAULT_AVATAR_2
+      when user.name[0].downcase < 'u' then DEFAULT_AVATAR_3
+    else DEFAULT_AVATAR_4
     end
-  end
-
-  def default_avatar
-
   end
 
   def pluralize_comments(comments)
