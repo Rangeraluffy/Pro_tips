@@ -17,7 +17,7 @@
 
   <div class="card-body">
     <p><%= @tip.body %></p>
-    <p class="text-muted">Created by <%= render partial: 'user_link', locals: { user: @tip.user } %> on <%= @tip.created_at %></p>
+    <p class="text-muted">Created by <%= render partial: 'user_link', locals: { user: @tip.user } %> on <%= @tip.created_at.strftime("%e %b %Y at %H:%M") %></p>
   </div>
 
   <div class="card-body">
@@ -27,18 +27,12 @@
         <blockquote class="blockquote">
           <p class="mb-0"><%= comment.body %></p>
           <footer class="blockquote-footer">
-            Added by <%= render partial: 'user_link', locals: { user: comment.user } %> on <%= comment.created_at %></footer>
+            Added by <%= render partial: 'user_link', locals: { user: comment.user } %> on <%= comment.created_at.strftime("%e %b %Y at %H:%M") %></footer>
         </blockquote>
       <% end %>
     </div>
     <p class="text-muted">Add your own comment</p>
-    <%=
-      # Notice how #build is used here to instantiate a new empty Comment to be
-      # used in the form.  #build is a convenient way to create an empty
-      # associated model instance for situations like this, instead of using
-      # Comment.new within TipsController#show to create an empty instance.
-      form_for([@tip, @tip.comments.build]) do |form|
-    %>
+    <%= form_for([@tip, @tip.comments.build]) do |form| %>
       <fieldset>
         <%= form.text_area(:body, class: 'form-control mb-2', rows: 5) %>
       </fieldset>
