@@ -15,6 +15,10 @@ module ApplicationHelper
     end
   end
 
+  def default_avatar
+
+  end
+
   def pluralize_comments(comments)
     pluralize = 's' if comments.count != 1
     "#{comments.count} comments#{pluralize}"
