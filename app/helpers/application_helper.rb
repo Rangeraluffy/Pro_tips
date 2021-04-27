@@ -6,11 +6,11 @@ module ApplicationHelper
 
   def default_avatar(user)
     case
-      when user.name.blank?            then DEFAULT_AVATAR_1
-      when user.name[0].downcase < 'h' then DEFAULT_AVATAR_1
-      when user.name[0].downcase < 'n' then DEFAULT_AVATAR_2
-      when user.name[0].downcase < 'u' then DEFAULT_AVATAR_3
-    else DEFAULT_AVATAR_4
+        when user.name.blank?            then DEFAULT_AVATAR_1
+        when user.name[0].downcase < 'h' then DEFAULT_AVATAR_1
+        when user.name[0].downcase < 'n' then DEFAULT_AVATAR_2
+        when user.name[0].downcase < 'u' then DEFAULT_AVATAR_3
+      else DEFAULT_AVATAR_4
     end
   end
 
