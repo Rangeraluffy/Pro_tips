@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+# Header Texts
+  signup: "Sign up"
+  login: "Log in"
+# Home Texts
+  homeTitle: "Share your programming tips with other developers online!"
+  homeLead: "... or find tips about something:"
+  homeRencentlyTips: "Here are the four most recently active tips:"
+  homeSearch: "Search"
