@@ -38,3 +38,6 @@ en:
   homeLead: "... or find tips about something:"
   homeRencentlyTips: "Here are the four most recently active tips:"
   homeSearch: "Search"
+# Tips_form Texts
+  maximumCharacters: "Maximum 100 characters"
+  cancel: "Cancel"
