@@ -1,0 +1,34 @@
+it:
+# Header Texts
+  login: "Accesso"
+  signup: "Registrati"
+  logout: 'Disconnettersi'
+  account: 'Account'
+  users: 'Utente'
+#  Home texts
+  homeTitle: "Condividi i tuoi suggerimenti di programmazione con altri sviluppatori online!"
+  homeLead: "... o trova consigli su qualcosa:"
+  homeRecentTips: "Ecco gli ultimi quattro suggerimenti attivi:"
+  search: 'Ricercare'
+# Helpers
+  helpers:
+    label:
+# Tip form
+  tip:
+    title: "Titolo"
+    body: "Corpo"
+# User form
+  user:
+    email: "Email"
+    name: "Nome"
+    avatar_url: "Avatar"
+  # Other texts in forms
+  # Tips form
+  maximumCharacters: "Massimo 100 caratteri"
+  tipUser: "Utente"
+  # User form
+  titleEditForm: "Modifica i dettagli dell'utente"
+  cancel: "Per cancellare"
+  update: "Aggiornare"
+  # Footer
+  selectLanguage: 'Scegli la lingua:'

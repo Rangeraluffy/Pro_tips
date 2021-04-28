@@ -58,7 +58,7 @@ en:
   maximumCharacters: "Maximum 100 characters"
   tipUser: "User"
 # User form
-  titleEditForm: "Edit User details"
+  titleUserEditForm: "Edit User details"
   cancel: "Cancel"
   update: "Update"
 # Footer
