@@ -1,7 +1,7 @@
 <p></p>
 
 <div class="jumbotron">
-  <h1 class="display-4"><%= translate('homeTitle') %></h1>
+  <h1 class="display-4"> <%= translate('homeTitle') %></h1>
   <hr class="my-4">
   <p class="lead"><%= translate('homeLead') %></p>
   <p class="lead">
@@ -12,14 +12,14 @@
           <%= text_field_tag :q, params[:q], class: 'form-control', placeholder: 'e.g. Ruby classes' %>
         </div>
         <div class="col-sm-2">
-          <%= submit_tag translate('homeSearch'), class: 'btn btn-primary' %>
+          <%= submit_tag translate('search'), class: 'btn btn-primary' %>
         </div>
       </div>
     <% end %>
   </p>
 </div>
 
-<h3><%= translate('homeRencentlyTips') %></h3>
+<h3><%= translate('homeRecentTips') %></h3>
 
 <div class="row">
 <% @tips.each do |tip| %>

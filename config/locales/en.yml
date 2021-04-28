@@ -31,13 +31,35 @@
 
 en:
 # Header Texts
-  signup: "Sign up"
   login: "Log in"
-# Home Texts
+  signup: "Sign up"
+  logout: 'Log out'
+  account: 'Account'
+  users: 'Users'
+#  Home texts
   homeTitle: "Share your programming tips with other developers online!"
   homeLead: "... or find tips about something:"
-  homeRencentlyTips: "Here are the four most recently active tips:"
-  homeSearch: "Search"
-# Tips_form Texts
+  homeRecentTips: "Here are the four most recently active tips:"
+  search: 'Search'
+# Helpers
+  helpers:
+    label:
+# Tip form
+  tip:
+    title: "Title"
+    body: "Body"
+# User form
+  user:
+    email: "Email"
+    name: "Name"
+    avatar_url: "Avatar"
+# Other texts in forms
+# Tips form
   maximumCharacters: "Maximum 100 characters"
+  tipUser: "User"
+# User form
+  titleEditForm: "Edit User details"
   cancel: "Cancel"
+  update: "Update"
+# Footer
+  selectLanguage: 'Select language:'
