@@ -1,5 +1,5 @@
 <div class="row mt-4 mb-4">
-  <h1 class="col-12 text-center display-4"><%= translate('titleUserEditForm') %></h1>
+  <h1 class="col-12 text-center display-4"> <%= translate('titleEditForm') %></h1>
 </div>
 <div class="row">
   <%= form_for(@user, html: { class: 'col-lg-10 offset-lg-1' }) do |form| %>
@@ -22,18 +22,18 @@
     </fieldset>
 
     <fieldset class="form-group row">
-      <%= form.label :avatar_url, class: 'col-md-2 col-form-label' %>
+      <%= form.label :avatar, class: 'col-md-2 col-form-label' %>
       <div class="col-md-10">
-        <%= form.text_field :avatar_url, class: 'form-control' %>
+        <%= form.file_field :avatar, class: 'form-control' %>
       </div>
     </fieldset>
 
     <fieldset class="form-group row d-flex flex-row-reverse">
       <div class="col-md-10">
-        <%= form.submit translate ('update'), class: 'btn btn-primary btn-block mb-2' %>
+        <%= form.submit translate('update'), class: 'btn btn-primary btn-block mb-2' %>
       </div>
       <div class="col-md-2">
-        <%= link_to translate ('cancel'), user_path(@user), class: 'btn btn-light btn-block' %>
+        <%= link_to translate('Cancel'), user_path(@user), class: 'btn btn-light btn-block' %>
       </div>
     </fieldset>
   <% end %>
