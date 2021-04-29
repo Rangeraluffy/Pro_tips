@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   validates :email, presence: true,
                     uniqueness: true
+
+#Add the has_secure_password in user class
+
+    has_secure_password
 end
