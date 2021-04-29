@@ -1,4 +1,5 @@
 class AccountController < ApplicationController
+
   def edit
     @user = User.first
   end
