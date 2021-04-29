@@ -8,6 +8,5 @@ class User < ApplicationRecord
                     uniqueness: true
 
 #Add the has_secure_password in user class
-
     has_secure_password
 end
