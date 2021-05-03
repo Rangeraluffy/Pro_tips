@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  include RolesHelper
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
