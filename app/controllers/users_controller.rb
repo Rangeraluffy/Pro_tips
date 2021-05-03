@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   before_action :set_user,      only: [:show, :edit, :update, :destroy]
   before_action :authorize_to_edit_user,  only: [:edit, :update]
-  before_action :ensure_admin,  only: [:index, :edit, :update, :destroy]
+  before_action :ensure_admin,  only: [:index, :destroy]
 
   def index
     @users = User.all
@@ -56,6 +56,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+    def authorize_to_edit_user
+      redirect_to account_path unless can_edit_user?(@user)
+    end
 
     def set_user
       @user = User.find(params[:id])

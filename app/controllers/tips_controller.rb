@@ -1,8 +1,9 @@
 class TipsController < ApplicationController
 
   include RolesHelper
-  
+
   before_action :set_tip, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_to_edit_tip, only: [:edit, :update, :destroy]
 
   def index
     @tips = Tip.where('title LIKE ?', "%#{params[:q]}%").or(
@@ -61,6 +62,10 @@ class TipsController < ApplicationController
 
     def set_tip
       @tip = Tip.find(params[:id])
+    end
+
+    def authorize_to_edit_tip
+      redirect_to account_path unless can_edit_tip(@tip)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
