@@ -1,4 +1,7 @@
 class TipsController < ApplicationController
+
+  include RolesHelper
+  
   before_action :set_tip, only: [:show, :edit, :update, :destroy]
 
   def index
