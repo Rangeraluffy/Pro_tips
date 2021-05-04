@@ -2,6 +2,7 @@ class TipsController < ApplicationController
 
   include RolesHelper
 
+  before_action :ensure_authenticated, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_tip, only: [:show, :edit, :update, :destroy]
   before_action :authorize_to_edit_tip, only: [:edit, :update, :destroy]
 
@@ -65,7 +66,7 @@ class TipsController < ApplicationController
     end
 
     def authorize_to_edit_tip
-      redirect_to account_path unless can_edit_tip(@tip)
+      redirect_to account_path unless can_edit_tip?(@tip)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
