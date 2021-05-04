@@ -1,18 +1,18 @@
-<% if notice %>
 <p id="notice"><%= notice %></p>
-<% end %>
 <% if alert %>
-<div id="error_explanation">
-  <p><%= alert %></p>
-</div>
+  <div id="error_explanation">
+    <p><%= alert %></p>
+  </div>
 <% end %>
 
 <div class="card mt-4">
   <div class="card-header d-flex justify-content-start">
     <h3><%= @tip.title %></h3>
+    <% if logged_in? && can_edit_tip?(@tip) %>
     <div>
       <%= link_to 'Edit', edit_tip_path(@tip), class: 'btn btn-outline-secondary ml-3' %>
     </div>
+    <% end %>
   </div>
 
   <div class="card-body">
@@ -31,6 +31,7 @@
         </blockquote>
       <% end %>
     </div>
+    <% if logged_in? %>
     <p class="text-muted">Add your own comment</p>
     <%= form_for([@tip, @tip.comments.build]) do |form| %>
       <fieldset>
@@ -39,6 +40,7 @@
       <fieldset class="d-flex justify-content-end">
         <%= form.submit class: 'btn btn-primary' %>
       </fieldset>
+      <% end %>
     <% end %>
   </div>
 </div>

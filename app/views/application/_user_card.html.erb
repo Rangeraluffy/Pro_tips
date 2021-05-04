@@ -4,11 +4,11 @@
     <% if logged_in? && can_edit_user?(user) %>
     <div>
         <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-outline-secondary mr-3' %>
-          <% if admin? %>
+      <% if admin? %>
         <%= link_to 'Delete', user_path(user), class: 'btn btn-outline-danger mr-3' %>
-        <% end %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+  <% end %>
   </div>
   <% if user.avatar_url.present? %>
     <%= image_tag user.avatar_url, class: 'card-img-top', alt: "Avatar for #{user.name}" %>
