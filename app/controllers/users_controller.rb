@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   include RolesHelper
 
+  before_action :ensure_authenticated, only: [:index, :edit, :update, :destroy]
   before_action :set_user,      only: [:show, :edit, :update, :destroy]
   before_action :authorize_to_edit_user,  only: [:edit, :update]
   before_action :ensure_admin,  only: [:index, :destroy]
@@ -67,6 +68,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.permit(:email, :name, :avatar_url)
+      params.permit(:email, :name, :avatar_url, :password)
     end
 end
