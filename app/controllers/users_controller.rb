@@ -2,13 +2,13 @@ class UsersController < ApplicationController
 
   include RolesHelper
 
-  before_action :ensure_authenticated, only: [:index, :edit, :update, :destroy]
+  before_action :ensure_authenticated,   only: [:index, :edit, :update, :destroy]
   before_action :set_user,      only: [:show, :edit, :update, :destroy]
   before_action :authorize_to_edit_user,  only: [:edit, :update]
   before_action :ensure_admin,  only: [:index, :destroy]
 
   def index
-    @users = User.all
+    @users = User.all.page(params[:page])
   end
 
   def show
@@ -30,6 +30,7 @@ class UsersController < ApplicationController
         # redirect_to().  It's a caonvenient way of setting a flash notice or
         # alert without referencing the flash Hash explicitly.
         format.html { redirect_to @user, notice: 'User was successfully created.' }
+        session[:user_id] = @user.id
       else
         format.html { render :new }
       end
