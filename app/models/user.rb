@@ -9,4 +9,7 @@ class User < ApplicationRecord
 
 #Add the has_secure_password in user class
     has_secure_password
+
+    # Pagination
+    paginates_per 6
 end
