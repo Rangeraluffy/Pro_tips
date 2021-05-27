@@ -10,7 +10,7 @@ module Account
   # unusual controller action names, like goals and ideas.
   class TipsController < ApplicationController
     def index
-      @tips = Tip.all.order(updated_at: :desc)
+      @tips = current_user.tips.order(updated_at: :desc)
     end
   end
 end
