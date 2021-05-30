@@ -24,6 +24,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: pro_tips
+  host: localhost
   pool: 5
   username: pro_tips
   password: secret
