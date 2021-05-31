@@ -42,8 +42,6 @@ ActiveRecord::Schema.define(version: 20210529140807) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    t.string "role"
-    t.string "avatar"
   end
 
 end
