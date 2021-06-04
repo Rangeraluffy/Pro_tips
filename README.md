@@ -23,4 +23,4 @@ The application is a tips forum, called Pro Tips, that allows developers to regi
 
 ## Deployed URL
 
-Public Heroku URL: < enter my Heroku url>
+Public Heroku URL: <https://sheltered-tor-87333.herokuapp.com>
