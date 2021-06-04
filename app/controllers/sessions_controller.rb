@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    @user = User.new
   end
 
   def create
@@ -11,7 +12,6 @@ class SessionsController < ApplicationController
     else
       flash[:alert] = 'Email or password were invalid.  Please try again'
       render 'new'
-      @user = User.new
     end
   end
 
