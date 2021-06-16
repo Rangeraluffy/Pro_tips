@@ -33,7 +33,7 @@
     </div>
     <% if logged_in? %>
     <p class="text-muted">Add your own comment</p>
-    <%= form_for([@tip, @tip.comments.build]) do |form| %>
+    <%= form_for([@tip, @tip.comments.build], remote: true) do |form| %>
       <fieldset>
         <%= form.text_area(:body, class: 'form-control mb-2', rows: 5) %>
       </fieldset>
