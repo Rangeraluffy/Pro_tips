@@ -5,8 +5,13 @@ class User < ApplicationRecord
   validates :email, presence: true,
                     uniqueness: true
 
+<<<<<<< HEAD
   has_many :tips, dependent: :destroy
   has_many :comments, dependent: :destroy
+=======
+  has_many :tips
+  has_many :comments
+>>>>>>> cd0d6c8df39ca20b102ed4bb2429fcd3b82827b9
   has_and_belongs_to_many :favourites, class_name: Tip.name
 
 #Add the has_secure_password in user class
