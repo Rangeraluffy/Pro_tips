@@ -1,8 +1,9 @@
 class User < ApplicationRecord
+  before_validation :downcase_email
+  after_initialize :default_role!
+
   validates :email, presence: true,
                     uniqueness: true
-
-  after_initialize :default_role!
 
   has_many :tips
   has_many :comments
@@ -18,6 +19,10 @@ class User < ApplicationRecord
     mount_uploader :avatar, AvatarUploader
 
     private
+
+    def downcase_email
+      self.email = email.downcase
+    end
 
     def default_role!
       self.role ||= 'registered'
