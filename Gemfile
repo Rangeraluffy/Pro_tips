@@ -65,3 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use CarrierWaver
 gem 'carrierwave', '~> 1.1.0'
+
+# Adding figaro to connect AWS
+gem "figaro"
