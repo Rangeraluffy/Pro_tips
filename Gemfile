@@ -68,3 +68,4 @@ gem 'carrierwave', '~> 1.1.0'
 
 # Adding figaro to connect AWS
 gem "figaro"
+gem "fog-aws"
