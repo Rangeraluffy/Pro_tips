@@ -3,3 +3,11 @@
 var Users;
 
 Users = {};
+
+Users.removeUserCard = function(userId) {
+  document.getElementById('user-' + userId).parentElement.remove();
+};
+
+Users.addNotice = function() {
+  document.getElementById('notice').textContent = 'User was successfully destroyed.';
+};

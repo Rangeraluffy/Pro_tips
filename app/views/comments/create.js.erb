@@ -1,0 +1,11 @@
+var comment = {
+  'body': "<%= @comment.body %>",
+  'when': "<%= @comment.created_at.strftime('%e %b %Y at %H: %M') %>",
+  'userName': "<%= @comment.user.name %>",
+  'userAvatar': "<%= @comment.user.avatar %>",
+  'userLink': "<%= user_path(@comment.user) %>"
+};
+console.log(comment);
+Comments.displayComment(comment);
+Comments.addNotice();
+document.getElementById('comment_body').value = "";

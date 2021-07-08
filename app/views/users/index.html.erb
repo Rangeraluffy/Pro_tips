@@ -4,6 +4,7 @@
 <div class="row mt-4">
   <% @users.each do |user| %>
     <div class="col-md-4">
+      <p id="notice"><%= notice %></p>
       <%= render partial: 'user_card', locals: { user: user } %>
     </div>
   <% end %>
