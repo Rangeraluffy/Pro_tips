@@ -7,7 +7,7 @@ class TipsController < ApplicationController
   before_action :authorize_to_edit_tip, only: [:edit, :update, :destroy]
 
   def index
-    @search_term = params[:q]
+    @search_term = params[:q].downcase  
     @tips = Tip.search(@search_term).page(params[:page])
   end
 

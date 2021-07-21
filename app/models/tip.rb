@@ -4,7 +4,7 @@ class Tip < ApplicationRecord
   validates :body,  presence: true
 
   belongs_to :user
-  has_many   :comments
+  has_many   :comments, dependent: :destroy
   has_and_belongs_to_many :users
 
   scope :most_recent_active, -> { order(updated_at: :desc).limit(4) }
