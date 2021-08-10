@@ -4,7 +4,7 @@
   <h1 class="display-4"> <%= translate('homeTitle') %></h1>
   <hr class="my-4">
   <p class="lead"><%= translate('homeLead') %></p>
-  <p class="lead">
+  <div class="lead">
     <%= form_tag tips_path, method: :get do %>
       <div class="form-row">
         <div class="col-sm-9">
@@ -16,10 +16,10 @@
         </div>
       </div>
     <% end %>
-  </p>
+  </div>
 </div>
 
-<h3><%= translate('homeRecentTips') %></h3>
+<h3>Home recent tips</h3>
 
 <div class="row">
 <% @tips.each do |tip| %>
