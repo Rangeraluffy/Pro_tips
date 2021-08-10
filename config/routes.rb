@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  root to: 'home#index'
+
   scope '(locale)', locale: /en|fr|it/ do
     get 'sessions/new'
-
-    root to: 'home#index'
 
     get  '/account', to: 'account#edit'
     post '/account', to: 'account#update'
