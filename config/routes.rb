@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  root 'home#index'
 
   scope '(locale)', locale: /en|fr|it/ do
     get 'sessions/new'
