@@ -4,11 +4,11 @@ This is the _*Dynamic web applications*_ course project. The third course projec
 
 This project was developed by **Alexandre Marolleau** during may 2020.
 
-##Project outline
+## Project outline
 
 The application is a tips forum, called Pro Tips, that allows developers to register and share short bits of advice with each other, and then comment on the tips others have created. The application basics have been completed, such as the core routes, views, controller actions and models.
 
-###Project tasks
+### Project tasks
 
 **Ruby and refactoring**
 - Use the code and refactor with the constraints and add functionalities in Ruby.
